@@ -16,7 +16,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="预见大王2025">
+  <meta name="author" content="AIDaWang">
   <meta name="keywords" content="">
   
     <meta name="description" content="创建时间: 2025年8月3日 21:35 引言很多老师希望拥有免费的个人博客网站，今天我们就一起基于GitHub Pages+Hexo搭建一个免费的博客网站。Hexo 是一个快速、简洁，而且功能强大的博客框架。我们可以使用 Markdown 编写博客文章，然后 hexo 帮我们把 Markdown 文件渲染成静态 HTML 页面。因此 hexo 非常适合用来搭建技术类博客，以及项目文档和个人网站">
@@ -50,7 +50,7 @@
 <meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%2016.png">
 <meta property="og:image" content="https://yaron9.github.io/AIDaWang/%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84">
 <meta property="article:published_time" content="2025-08-04T01:36:30.000Z">
-<meta property="article:modified_time" content="2025-08-04T09:51:39.555Z">
+<meta property="article:modified_time" content="2025-08-04T10:11:56.801Z">
 <meta property="article:author" content="预见大王2025">
 <meta property="article:tag" content="小白实战教程">
 <meta name="twitter:card" content="summary_large_image">
@@ -305,11 +305,7 @@
 <p>本人纯小白，所以这个教程也是面向和我一样的小白的，那我们接下来就一步一步的搭建吧。</p>
 <p><img src="/AIDaWang/images/image.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
 <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
-<h1 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a><strong>1. 安装Hexo</strong></h1><h2 id="1-1-Hexo环境配置"><a href="#1-1-Hexo环境配置" class="headerlink" title="1.1 Hexo环境配置"></a><strong>1.1 Hexo环境配置</strong></h2><p> hexo 是基于 Node.js 的架构，因此要安装 hexo，需要先安装 Node.js 和 npm.</p>
-<p>官网安装方法：利用npm工具，执行：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
-
-<h2 id="1-2-安装-Node-js"><a href="#1-2-安装-Node-js" class="headerlink" title="1.2 安装 Node.js"></a><strong>1.2 安装 Node.js</strong></h2><p>安装 Node.js ，直接打开<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js官网</a>，点击Get Node.js， 下载软件然后进行安装就可以了。</p>
+<h1 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a><strong>1. 安装Hexo</strong></h1><h2 id="1-1-Hexo环境配置"><a href="#1-1-Hexo环境配置" class="headerlink" title="1.1 Hexo环境配置"></a><strong>1.1 Hexo环境配置</strong></h2><p> hexo 是基于 Node.js 的架构，因此要安装 hexo，需要先安装 Node.js 和 npm.<br>安装 Node.js ，直接打开<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js官网</a>，点击Get Node.js， 下载软件然后进行安装就可以了。</p>
 <p><img src="/AIDaWang/images/image%201.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
 <p><img src="/AIDaWang/images/image%202.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
 <p>安装这个软件，会同时安装 node 和 npm 这2个工具。安装完成以后，我们来验证一下是否安装成功了。执行下面的命令，如果能输出版本号，就代表 node 安装成功了。</p>
@@ -319,7 +315,7 @@
 <p>接着再执行这条命令，同样如果能输出版本号就证明 npm 也安装成功了</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm -v<br></code></pre></td></tr></table></figure>
 
-<h2 id="1-3-安装-Hexo"><a href="#1-3-安装-Hexo" class="headerlink" title="1.3 安装 Hexo"></a><strong>1.3 安装 Hexo</strong></h2><ol>
+<h2 id="1-2-安装-Hexo"><a href="#1-2-安装-Hexo" class="headerlink" title="1.2 安装 Hexo"></a><strong>1.2 安装 Hexo</strong></h2><ol>
 <li><p>安装 hexo，需要注意我们这里安装的是 <code>hexo客户端</code> 。安装 hexo 需要使用 npm 命令，但是在国内使用 npm 安装软件，速度很慢。因此我们先执行下面这条命令，给 npm 替换成国内的源，这样安装速度就会快很多了。</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm config <span class="hljs-built_in">set</span> registry [https://registry.npmmirror.com](https://registry.npmmirror.com/) <br></code></pre></td></tr></table></figure>
 </li>
@@ -513,7 +509,7 @@
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>预见大王2025</div>
+          <div>AIDaWang</div>
         </div>
       
       
