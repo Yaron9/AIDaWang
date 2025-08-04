@@ -1,0 +1,855 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/AIDaWang/img/fluid.png">
+  <link rel="icon" href="/AIDaWang/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="预见大王2025">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="创建时间: 2025年8月3日 21:35 引言很多老师希望拥有免费的个人博客网站，今天我们就一起基于GitHub Pages+Hexo搭建一个免费的博客网站。Hexo 是一个快速、简洁，而且功能强大的博客框架。我们可以使用 Markdown 编写博客文章，然后 hexo 帮我们把 Markdown 文件渲染成静态 HTML 页面。因此 hexo 非常适合用来搭建技术类博客，以及项目文档和个人网站">
+<meta property="og:type" content="article">
+<meta property="og:title" content="纯小白实战如何建立免费个人博客网站">
+<meta property="og:url" content="https://yaron9.github.io/AIDaWang/2025/08/04/Blog1/index.html">
+<meta property="og:site_name" content="AIDaWang">
+<meta property="og:description" content="创建时间: 2025年8月3日 21:35 引言很多老师希望拥有免费的个人博客网站，今天我们就一起基于GitHub Pages+Hexo搭建一个免费的博客网站。Hexo 是一个快速、简洁，而且功能强大的博客框架。我们可以使用 Markdown 编写博客文章，然后 hexo 帮我们把 Markdown 文件渲染成静态 HTML 页面。因此 hexo 非常适合用来搭建技术类博客，以及项目文档和个人网站">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%201.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%202.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/59bae029-97f0-4174-a4af-de8814db1f66.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%203.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%204.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%205.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%206.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%207.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%208.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%209.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%2010.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/%E6%88%AA%E5%B1%8F2025-08-04_00.35.05.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%2011.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%2012.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%2013.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%2014.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/%E6%88%AA%E5%B1%8F2025-08-04_14.54.09.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/%E6%88%AA%E5%B1%8F2025-08-04_14.58.39.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/%E6%88%AA%E5%B1%8F2025-08-04_15.04.17.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%2015.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/images/image%2016.png">
+<meta property="og:image" content="https://yaron9.github.io/AIDaWang/%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84">
+<meta property="article:published_time" content="2025-08-04T01:36:30.000Z">
+<meta property="article:modified_time" content="2025-08-04T09:51:39.555Z">
+<meta property="article:author" content="预见大王2025">
+<meta property="article:tag" content="小白实战教程">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yaron9.github.io/AIDaWang/images/image.png">
+  
+  
+  
+  <title>纯小白实战如何建立免费个人博客网站 - AIDaWang</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/AIDaWang/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/AIDaWang/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/AIDaWang/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"yaron9.github.io","root":"/AIDaWang/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/AIDaWang/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/AIDaWang/js/utils.js" ></script>
+  <script  src="/AIDaWang/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/AIDaWang/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/AIDaWang/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/AIDaWang/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/AIDaWang/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/AIDaWang/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/AIDaWang/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/AIDaWang/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="纯小白实战如何建立免费个人博客网站"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-08-04 09:36" pubdate>
+          2025年8月4日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          21 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">纯小白实战如何建立免费个人博客网站</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>创建时间: 2025年8月3日 21:35</p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>很多老师希望拥有免费的个人博客网站，今天我们就一起基于GitHub Pages+Hexo搭建一个免费的博客网站。Hexo 是一个快速、简洁，而且功能强大的博客框架。我们可以使用 Markdown 编写博客文章，然后 hexo 帮我们把 Markdown 文件渲染成静态 HTML 页面。因此 hexo 非常适合用来搭建技术类博客，以及项目文档和个人网站。</p>
+<p>本人纯小白，所以这个教程也是面向和我一样的小白的，那我们接下来就一步一步的搭建吧。</p>
+<p><img src="/AIDaWang/images/image.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+<h1 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a><strong>1. 安装Hexo</strong></h1><h2 id="1-1-Hexo环境配置"><a href="#1-1-Hexo环境配置" class="headerlink" title="1.1 Hexo环境配置"></a><strong>1.1 Hexo环境配置</strong></h2><p> hexo 是基于 Node.js 的架构，因此要安装 hexo，需要先安装 Node.js 和 npm.</p>
+<p>官网安装方法：利用npm工具，执行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+
+<h2 id="1-2-安装-Node-js"><a href="#1-2-安装-Node-js" class="headerlink" title="1.2 安装 Node.js"></a><strong>1.2 安装 Node.js</strong></h2><p>安装 Node.js ，直接打开<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js官网</a>，点击Get Node.js， 下载软件然后进行安装就可以了。</p>
+<p><img src="/AIDaWang/images/image%201.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="/AIDaWang/images/image%202.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+<p>安装这个软件，会同时安装 node 和 npm 这2个工具。安装完成以后，我们来验证一下是否安装成功了。执行下面的命令，如果能输出版本号，就代表 node 安装成功了。</p>
+<p>在终端命令行执行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">node -v<br></code></pre></td></tr></table></figure>
+
+<p>接着再执行这条命令，同样如果能输出版本号就证明 npm 也安装成功了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm -v<br></code></pre></td></tr></table></figure>
+
+<h2 id="1-3-安装-Hexo"><a href="#1-3-安装-Hexo" class="headerlink" title="1.3 安装 Hexo"></a><strong>1.3 安装 Hexo</strong></h2><ol>
+<li><p>安装 hexo，需要注意我们这里安装的是 <code>hexo客户端</code> 。安装 hexo 需要使用 npm 命令，但是在国内使用 npm 安装软件，速度很慢。因此我们先执行下面这条命令，给 npm 替换成国内的源，这样安装速度就会快很多了。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm config <span class="hljs-built_in">set</span> registry [https://registry.npmmirror.com](https://registry.npmmirror.com/) <br></code></pre></td></tr></table></figure>
+</li>
+<li><p>接着执行下面这条命令，使用 npm 安装 hexo客户端</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>安装好 hexo 以后，执行以下代码初始化 myblog 文件夹（自定义）。这个文件夹，就是我们的博客项目，用来存放我们的全部博客文章。</p>
+ <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">hexo <span class="hljs-keyword">init</span> myblog<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>然后用cd命令进入mublog根目录</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> myblog<br></code></pre></td></tr></table></figure>
+<p> 进入到文件夹，接着执行npm install命令安装依赖包。</p>
+ <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>到这里我们的 hexo 环境配置就基本完成了，下面就可以使用它来写文章和发布文章了！👍👍👍</p>
+<h1 id="2-使用-Hexo-管理博客"><a href="#2-使用-Hexo-管理博客" class="headerlink" title="2. 使用 Hexo 管理博客"></a><strong>2. 使用 Hexo 管理博客</strong></h1><h2 id="2-1-本地预览"><a href="#2-1-本地预览" class="headerlink" title="2.1 本地预览"></a>2.1 本地预览</h2><ol>
+<li><p>为了方便编辑，我们使用 Trae(Cursor&#x2F;Vscode等也可） 打开 myblog 文件夹。下面来看一下 myblog 里面的主要组成部分：</p>
+<p> <img src="/AIDaWang/images/59bae029-97f0-4174-a4af-de8814db1f66.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+<ul>
+<li>_config.yml：全局配置文件，网站的名称、描述、作者、语言等，都可以设置</li>
+<li>source&#x2F;_post：存放博客文章， hexo 提供了一篇范例文章 hello-world</li>
+<li>themes：主题配置文件，hexo 有很多开源主题，可以根据喜好下载</li>
+</ul>
+</li>
+<li><p>接着执行以下2条命令，开启 hexo 本地服务，这样就可以在本地预览文章了。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">hexo generate<br>hexo server <br></code></pre></td></tr></table></figure>
+<p> 打开 <em><strong><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></strong></em> 这个本地网址，已经可以正常访问了，这里就是博客网页的布局。</p>
+<p> <img src="/AIDaWang/images/image%203.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+</li>
+</ol>
+<h2 id="2-2-将博客托管到-GitHub-Pages"><a href="#2-2-将博客托管到-GitHub-Pages" class="headerlink" title="2.2 将博客托管到 GitHub Pages"></a><strong>2.2 将博客托管到 GitHub Pages</strong></h2><h3 id="2-2-1-创建仓库"><a href="#2-2-1-创建仓库" class="headerlink" title="2.2.1 创建仓库"></a>2.2.1 创建仓库</h3><ol>
+<li><p>现在我们这个博客，还只能在本地网址预览。下面我们把博客项目托管到 GitHub 仓库，并且使用 GitHub Pages 来部署博客，让其他人也能访问我们的博客网站。</p>
+<p> <img src="/AIDaWang/images/image%204.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+</li>
+<li><p>创建完成后，GitHub 给我们列出了一些，快速设置这个仓库的操作指令。我们选择第一种，依次执行它给我们提供的这些命令。需要注意，<code>git add README.md</code> 这条命令我们要替换成 <code>git add .</code> 来把 myblog 文件夹下的全部文件上传至仓库。</p>
+<p> <img src="/AIDaWang/images/image%205.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+<p> 首先回到命令行，执行Ctrl+C， 退出Hexo的本地服务（也可以不退出，再开一个命令窗口），依次执行下方命令，把myblog的本地文件映射到github 仓库。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">echo <span class="hljs-string">&quot;# AIDaWang&quot;</span> &gt;&gt; README.md<br>git init<br>git add .<br>git commit -m <span class="hljs-string">&quot;first commit&quot;</span><br>git branch -M main<br>git remote add origin git@github.com:Yaron9/AIDaWang.git<br>git push -u origin main<br></code></pre></td></tr></table></figure>
+ <aside>
+ 💡
+ 
+<p> <strong>说明：</strong></p>
+<p> 老师们如果第一次执行push任务，可能遇到Permission denied (publickey)报错，这通常是 github SSH 密钥配置问题，需要生成一个新的SSH密钥对。可以执行以下代码：</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">ssh-keygen -t rsa -b <span class="hljs-number">4096</span> -f ~/.ssh/id_rsa <br></code></pre></td></tr></table></figure>
+<p> 然后输入这个代码查看生成的秘钥，</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">cat ~/.ssh/id_rsa.pub<br></code></pre></td></tr></table></figure>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDa2JU12Pho3ucqswQtdKxWfWW3PBIw1um+al2aqPUcA3zyn/tBNB70htkXC3yfOk4v7ZxdoW/3a6Z2oB4gxq6ArPxlF3NUEkzCX9JpJkon9wPsYENOZbZS7tUzgD1git6v844RxVAusgYC3ZqoMe3Uwqbv0XvYR4v0nhJU6jInjd75rKTDfnTUWqdfi/BsuicntxhEreJoybjATR24GoHOggkOQ7joPPUBjuSnioNAgGFmD949OKe61/u0p4Fyg2tHR9QMNurJuY35QtcofcI53lVPXFz/2NjGU+ZOkPVJBJeLiWiuETZIWKVtnUSecB5/AFu//w0QK5Ig30mhFsH+4Dfs0rHUBoiV9TOTRiEkkAyBp8JI5dmQYFNis3eF/K/5AfZe9CBe+lnXR9pxdSyK/tDe2zl6F508JdutQBTzyGJ5NiqYJ0731YrXG+qfTaLJtO04kL2tCHV0y1foOX05pOZgcqpFJB8vr8CNH88A3Hzra/EI1RY8MNpOnbxfKMzKWTjLM2S3q/UWlz/v+MyhhOUnnNN1F0JOVFk0+n/9UF5x4fyNlkg5oiXNwvoOrmsnld2OgaisVeXntUoQV7J3X67AsmweHX6VG7m4GB8Waf4StjM51J7LUllvI8dNf/go56qgvVIRSsRr***********w== yaron@MacBook-Pro.local<br></code></pre></td></tr></table></figure>
+<p> 然后我们把显示出的以ssh-rsa 开头的一长串字符，复制粘贴到个人的github账号设置中，具体操作如下：</p>
+<p> 右上角用户头像→setting→左边栏（🔑SSH and GPC Keys)→New SSH key→粘贴到key窗口→add SSH key.  搞定后 <strong>Authentication keys下方</strong>会显示一个板块。</p>
+<p> <img src="/AIDaWang/images/image%206.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+<p> <img src="/AIDaWang/images/image%207.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+ </aside>
+ </li>
+<li><p>执行如下代码，如果有Permission denied (publickey)报错，就按以上说明操作后执行下方代码。</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">git push -u origin main<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-2-2-GitHub-Pages-部署博客"><a href="#2-2-2-GitHub-Pages-部署博客" class="headerlink" title="2.2.2  GitHub Pages 部署博客"></a><strong>2.2.2  GitHub Pages 部署博客</strong></h3><ol>
+<li><p>把本地文件映射到Github仓库后，就可以把项目部署到Github Pages上了。这样就可以在网上访问我们的博客网站了。具体操作步骤：<br>首先在 myblog 项目的 _config.yml 配置文件中，把 git 服务部署的配置加进去。</p>
+<p> 在文件最后填写：</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/one-command-deployment</span><br>deploy:<br>  <span class="hljs-built_in">type</span>: git<br>  repository: git@github.com:Yaron9/AIDaWang.git<br>  branch: main<br><br></code></pre></td></tr></table></figure>
+<p> repository：替换为你自己的， 在code→SSH  复制过来。</p>
+<p> <img src="/AIDaWang/images/image%208.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+</li>
+<li><p>然后安装 hexo-deployer-git 这个插件，来简化部署到 GitHub Pages 的流程</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>这样配置完以后，我们就可以在本地写文章，写完以后通过 <a target="_blank" rel="noopener" href="http://localhost:4000/"><em><strong>http://localhost:4000/</strong></em></a> 预览文章效果并进行修改。修改满意后，就可以部署到 GitHub Pages 这样其他人就能访问我们的博客了。使用流程如下：</p>
+<ol>
+<li><p>创建博客：hexo new post 文章标题,然后我们看到左边源码Source&#x2F;_posts 文件夹中生成一个md文件。我们可以直接在里面编辑博客内容即可。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">hexo new post myblog1<br><br></code></pre></td></tr></table></figure>
+<p> <img src="/AIDaWang/images/image%209.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+</li>
+</ol>
+<p> b. 在本地预览效果， 激活本地hexo服务 </p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">hexo server<br></code></pre></td></tr></table></figure>
+<p> <img src="/AIDaWang/images/image%2010.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+</li>
+</ol>
+<p>c. 然后把文章发布到 GitHub Pages。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure>
+
+<aside>
+💡
+
+<ul>
+<li>hexo generate：生成渲染，简写 hexo -g</li>
+<li>hexo deploy：部署到 GitHub Pages，简写 hexo -d</li>
+<li>hexo server：启动本地预览，简写 hexo -s</li>
+<li>hexo clean：清除缓存，简写 hexo -c</aside></li>
+</ul>
+<p>d. 发布完成后，我们回到仓库，点击上方标签⚙Settings→左边栏Pages→<strong>Build and deployment→Deploy from branch→branch选择main→root→save(保存）</strong></p>
+<p>然后可以看到：<strong>Your site is live at <a href="https://yaron9.github.io/AIDaWang/">https://yaron9.github.io/AIDaWang/</a><br>点击visit site 即可访问。</strong></p>
+<p><img src="/AIDaWang/images/%E6%88%AA%E5%B1%8F2025-08-04_00.35.05.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="截屏2025-08-04 00.35.05.png"></p>
+<p><img src="/AIDaWang/images/image%2011.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+<h2 id="2-3-修改Hexo主题"><a href="#2-3-修改Hexo主题" class="headerlink" title="2.3 修改Hexo主题"></a>2.3 修改Hexo主题</h2><p>Hexo有很多开源主题，我们到github.com主页上搜索，hexo theme ，可以根据个人喜好更换。我们选择的时候可以看看这个主题是否还在维护，优先选择。我们选择butterfly 这个主题。</p>
+<p><img src="/AIDaWang/images/image%2012.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+<ol>
+<li><p>(可选）用git clone 命令把它克隆到本地 themes文件夹中的butterfly 文件夹中。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly<br></code></pre></td></tr></table></figure>
+<p> Butterfly 主题有一些必须的依赖插件需要安装，分别是 hexo-renderer-pug 和 hexo-renderer-stylus 。执行命令安装：</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm install hexo-renderer-pug hexo-renderer-stylus --save<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>（可选）我们也可以下载多个主题，比如fliud,可以npm直接安装</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
+<p> 根据主体文档要求，我们需要在根目录下创建一个名为 _config.fluid.yml 的新配置文件，并将主题的默认配置复制进去。</p>
+<p> 直接复制_ _config.yml,然后重命名为_config.fluid.yml 即可。</p>
+<p> 按照说明生成about页面</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">hexo new page about<br></code></pre></td></tr></table></figure>
+<p> 然后再source&#x2F;about路径下找到index.md文件，将里面的内容修改为：</p>
+ <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: about<br><span class="hljs-section">layout: about</span><br><span class="hljs-section">---</span><br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>主题安装完成以后，我们修改config.yml文件中的theme值即可切换主题</p>
+<p> <img src="/AIDaWang/images/image%2013.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+<p> 我们可以运行hexo server 本地测试下</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">hexo server<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>我们还可以更改欢迎页的标题</p>
+<p> 在_config.fluid.yml中末尾添加</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># Fluid Theme Configuration</span><br><span class="hljs-comment"># 首页配置</span><br>index:<br>  <span class="hljs-comment"># 首页副标题的独立设置</span><br>  slogan:<br>    enable: true<br>    <span class="hljs-comment"># 自定义副标题文本</span><br>    text: <span class="hljs-string">&quot;欢迎遇见大王2025&quot;</span><br></code></pre></td></tr></table></figure>
+<p> 我们可以更换语言为中文，这需要在系统框架中修改，即在_config.yml文件中将language:改为zh-CN</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">title: AIDaWang<br>subtitle: AI大王<br>description: 一起了解AI咨询、学习前沿技术<br>keywords:<br>author: 预见大王<span class="hljs-number">2025</span><br>language: zh-CN <br>timezone: Asia/Shanghai<br></code></pre></td></tr></table></figure>
+<p> <img src="/AIDaWang/images/image%2014.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+</li>
+</ol>
+<h2 id="2-4-添加评论功能"><a href="#2-4-添加评论功能" class="headerlink" title="2.4 添加评论功能"></a>2.4 添加评论功能</h2><ol>
+<li><p>把最新的文件部署到github pages上</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>目前我们的博客是没有评论功能的，安装一个<a target="_blank" rel="noopener" href="https://github.com/apps/utterances">utterances</a>开源评论插件，就可以实现评论了。</p>
+<p> <img src="/AIDaWang/images/%E6%88%AA%E5%B1%8F2025-08-04_14.54.09.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="截屏2025-08-04 14.54.09.png"></p>
+</li>
+<li><p>点击安装，选择对应的仓库，这里需要输入密码。</p>
+<p> 回到Github仓库，settings→General→下拉Features→勾选DIsscusions→</p>
+<p> <img src="/AIDaWang/images/%E6%88%AA%E5%B1%8F2025-08-04_14.58.39.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="截屏2025-08-04 14.58.39.png"></p>
+</li>
+<li><p>回到本地hexo源代码，修改_config.fluid.yml，在文后填入以下代码，其中repo值替换为：你的用户名&#x2F;仓库名，如：Yaron9&#x2F;AIDaWang</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python">post:<br>  comments:<br>    enable: true<br>    <span class="hljs-built_in">type</span>: utterances<br><br>utterances:<br>  repo: Yaron9/AIDaWang<br>  issue_term: title<br>  label: utterances<br>  theme: github-light<br>  theme_dark: github-dark<br>  crossorigin: anonymous    <br></code></pre></td></tr></table></figure>
+</li>
+<li><p>保存后，重新发布：</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>打开GitHub Pages 确认最新更新后打开页面。</p>
+<p> <img src="/AIDaWang/images/%E6%88%AA%E5%B1%8F2025-08-04_15.04.17.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="截屏2025-08-04 15.04.17.png"></p>
+</li>
+<li><p>访问网站，可以用github账户登录，在下方有评论页面，搞定！</p>
+<p> <img src="/AIDaWang/images/image%2015.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+</li>
+</ol>
+<h1 id="3-发表博客"><a href="#3-发表博客" class="headerlink" title="3. 发表博客"></a>3. 发表博客</h1><ol>
+<li><p>在source&#x2F;posts这个文件夹中，新建一个md文件。把本次推文粘贴进去。</p>
+<p> <img src="/AIDaWang/images/image%2016.png" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png"></p>
+</li>
+<li><p>打开编辑内容</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">---<br>title: 纯小白实战如何建立免费个人博客网站<br>tags: 小白实战教程<br>---<br>粘贴正文<br></code></pre></td></tr></table></figure>
+<p> 图片编辑，我们没有图床功能，就用最笨也是最简单的方法，<br> 在 source下创建images文件夹，然后把需要插入的图片放进去<br> 在正文中用<img src="/AIDaWang/%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84" srcset="/AIDaWang/img/loading.gif" lazyload alt="image.png">的格式插入图片</p>
+</li>
+<li><p>发布博客</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="4-结束语"><a href="#4-结束语" class="headerlink" title="4. 结束语"></a>4. 结束语</h1><p>本文作者以一个纯小白的身份，和各位老师一起实战如何在GitHub上建立个人博客。该博客基于Hexo开源博客框架，支持用户上传Markdown格式的博客文章，这对于当前大模型辅助撰写博客非常友好（注：本文是小白博主纯手打的），第一次撰写博客，如有不周之处，望各位老师担待。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/AIDaWang/tags/%E5%B0%8F%E7%99%BD%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/" class="print-no-link">#小白实战教程</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>纯小白实战如何建立免费个人博客网站</div>
+      <div>https://yaron9.github.io/AIDaWang/2025/08/04/Blog1/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>预见大王2025</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年8月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'Yaron9/AIDaWang');
+      s.setAttribute('issue-term', 'title');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/AIDaWang/js/events.js" ></script>
+<script  src="/AIDaWang/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/AIDaWang/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/AIDaWang/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/AIDaWang/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
